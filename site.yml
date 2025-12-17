@@ -24,7 +24,7 @@
       name:
         - apache2
         - libapache2-mod-php
-      when: ansible_distribution == "Ubuntu"
+    when: ansible_distribution == "Ubuntu"
 
 - hosts: db_servers
   become: true
@@ -33,5 +33,5 @@
     ansible.builtin.dnf:
       name: mariadb
       state: latest
-    when: ansible_distibution == "Fedora"
+    when: ansible_distribution == "Fedora"
 
